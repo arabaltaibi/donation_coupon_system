@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include donation_coupon_system *.css
+recursive-include donation_coupon_system *.csv
+recursive-include donation_coupon_system *.html
+recursive-include donation_coupon_system *.ico
+recursive-include donation_coupon_system *.js
+recursive-include donation_coupon_system *.json
+recursive-include donation_coupon_system *.md
+recursive-include donation_coupon_system *.png
+recursive-include donation_coupon_system *.py
+recursive-include donation_coupon_system *.svg
+recursive-include donation_coupon_system *.txt
+recursive-exclude donation_coupon_system *.pyc
