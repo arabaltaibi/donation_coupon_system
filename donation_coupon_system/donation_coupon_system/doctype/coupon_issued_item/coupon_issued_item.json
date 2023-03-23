@@ -1,0 +1,185 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-22 15:22:34.318515",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "column_break_2",
+  "book_size",
+  "column_break_4",
+  "available_books",
+  "column_break_6",
+  "balance_book_value",
+  "section_break_8",
+  "books",
+  "column_break_10",
+  "from",
+  "column_break_12",
+  "to",
+  "column_break_14",
+  "coupons",
+  "section_break_16",
+  "balance_books",
+  "column_break_18",
+  "book_value",
+  "cb20",
+  "issue_value",
+  "column_break_20",
+  "balance_value",
+  "coupon_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "default": "0",
+   "fetch_from": "item.book_size",
+   "fieldname": "book_size",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Book Size",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fetch_from": "item.book_value",
+   "fieldname": "book_value",
+   "fieldtype": "Currency",
+   "label": "Book Value",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "books",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Books Issue"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "From"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "To"
+  },
+  {
+   "fieldname": "coupons",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Coupons"
+  },
+  {
+   "default": "0",
+   "fieldname": "issue_value",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Issue Value",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_books",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Balance Books",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_value",
+   "fieldtype": "Currency",
+   "label": "Balance Value",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "available_books",
+   "fieldtype": "Int",
+   "label": "Available Books",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break",
+   "label": "Issuing Details"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_book_value",
+   "fieldtype": "Currency",
+   "label": "Balance Book Value",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "item.coupon_value",
+   "fieldname": "coupon_value",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Coupon Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-24 01:12:43.049453",
+ "modified_by": "Administrator",
+ "module": "Donation Coupon System",
+ "name": "Coupon Issued Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

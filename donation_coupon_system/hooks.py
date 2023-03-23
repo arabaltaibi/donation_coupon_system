@@ -186,3 +186,9 @@ user_data_fields = [
 # Recommended only for DocTypes which have limited documents with untranslated names
 # For example: Role, Gender, etc.
 # translated_search_doctypes = []
+
+doc_events = {
+    "Coupon Issued Item": {
+        "validate": "donation_coupon_system.donation_coupon_system.item_utils.get_item_balance_qty"
+    }
+}
