@@ -192,3 +192,6 @@ doc_events = {
         "validate": "donation_coupon_system.donation_coupon_system.item_utils.get_item_balance_qty"
     }
 }
+# donation_coupon_system/hooks.py
+
+app_include_files = ["assets/js/custom.js", "assets/css/custom.css", "hooks/custom_fields.py", "config/my_module.py"]
