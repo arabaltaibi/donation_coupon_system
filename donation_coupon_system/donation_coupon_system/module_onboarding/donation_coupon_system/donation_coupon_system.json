@@ -1,0 +1,29 @@
+{
+ "allow_roles": [
+  {
+   "role": "Accounts Manager"
+  }
+ ],
+ "creation": "2023-03-24 05:15:29.679012",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "Donation Coupon System",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2023-03-24 05:16:47.327099",
+ "modified_by": "Administrator",
+ "module": "Donation Coupon System",
+ "name": "Donation Coupon System",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Coupon Issued"
+  },
+  {
+   "step": "Coupon Settings"
+  }
+ ],
+ "subtitle": "Donation Coupon System",
+ "success_message": "Donation Coupon System",
+ "title": "Donation Coupon System"
+}

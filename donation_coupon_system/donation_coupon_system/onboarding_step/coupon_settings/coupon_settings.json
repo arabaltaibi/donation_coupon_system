@@ -1,0 +1,19 @@
+{
+ "action": "Create Entry",
+ "creation": "2023-03-24 05:16:43.204438",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_single": 1,
+ "is_skipped": 0,
+ "modified": "2023-03-24 05:16:43.204438",
+ "modified_by": "Administrator",
+ "name": "Coupon Settings",
+ "owner": "Administrator",
+ "reference_document": "Coupon Settings",
+ "show_form_tour": 0,
+ "show_full_form": 0,
+ "title": "Coupon Settings",
+ "validate_action": 1
+}

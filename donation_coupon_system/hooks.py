@@ -195,3 +195,9 @@ doc_events = {
 # donation_coupon_system/hooks.py
 
 app_include_files = ["assets/js/custom.js", "assets/css/custom.css", "hooks/custom_fields.py", "config/my_module.py"]
+# donation_coupon_system/hooks.py
+
+app_include_hooks = [
+    "donation_coupon_system.donation_coupon_system.doctype.coupon_issued.coupon_issued.get_data"
+    "donation_coupon_system.donation_coupon_system.doctype.coupon_settings.coupon_settings.get_data"
+]
