@@ -1,0 +1,131 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-27 12:12:04.085597",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "denomination",
+  "column_break_3",
+  "mahasil",
+  "column_break_5",
+  "donation_type",
+  "column_break_7",
+  "type",
+  "serial_no_section",
+  "book_no",
+  "column_break_11",
+  "coupon_no_from",
+  "column_break_13",
+  "coupon_no_to",
+  "section_break_15",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "denomination",
+   "fieldtype": "Currency",
+   "label": "Denomination"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "mahasil",
+   "fieldtype": "Link",
+   "label": "Mahasil",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "donation_type",
+   "fieldtype": "Link",
+   "label": "Donation Type",
+   "options": "Item Group"
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "label": "Type",
+   "options": "\nReturned\nDamaged\nBad Debt"
+  },
+  {
+   "fieldname": "serial_no_section",
+   "fieldtype": "Section Break",
+   "label": "Serial No"
+  },
+  {
+   "default": "0",
+   "fieldname": "book_no",
+   "fieldtype": "Int",
+   "label": "Book No"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "coupon_no_from",
+   "fieldtype": "Int",
+   "label": "Coupon No From"
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_15",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
+  },
+  {
+   "default": "0",
+   "fieldname": "coupon_no_to",
+   "fieldtype": "Int",
+   "label": "To"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-27 12:23:25.650217",
+ "modified_by": "Administrator",
+ "module": "Donation Coupon System",
+ "name": "Returned Damaged Coupons",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

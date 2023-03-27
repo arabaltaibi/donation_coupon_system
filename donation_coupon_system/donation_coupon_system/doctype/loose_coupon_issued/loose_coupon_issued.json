@@ -1,0 +1,164 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "naming_series:",
+ "creation": "2023-03-27 11:41:18.068211",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "column_break_2",
+  "location",
+  "column_break_4",
+  "mahasil",
+  "column_break_3",
+  "donation",
+  "section_break_6",
+  "items",
+  "section_break_8",
+  "total_coupons_balance",
+  "column_break_9",
+  "total_value_balance",
+  "column_break_11",
+  "total_coupons_issue",
+  "column_break_13",
+  "total_value_issue",
+  "section_break_16",
+  "remarks",
+  "naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mahasil",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Mahasil",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Location",
+   "options": "Territory",
+   "reqd": 1
+  },
+  {
+   "fieldname": "donation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Donation",
+   "options": "Item Group",
+   "reqd": 1
+  },
+  {
+   "depends_on": "donation",
+   "fieldname": "items",
+   "fieldtype": "Table",
+   "options": "Loose Coupon Issued Items"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "total_coupons_balance",
+   "fieldtype": "Int",
+   "label": "Total Coupons Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_value_balance",
+   "fieldtype": "Currency",
+   "label": "Total Value Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_coupons_issue",
+   "fieldtype": "Int",
+   "label": "Total Coupons Issue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_13",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_value_issue",
+   "fieldtype": "Currency",
+   "label": "Total Value Issue",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_8",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_16",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": ".YY./.",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "options": ".YY./."
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-27 13:00:20.805467",
+ "modified_by": "Administrator",
+ "module": "Donation Coupon System",
+ "name": "Loose Coupon Issued",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

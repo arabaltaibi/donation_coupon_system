@@ -1,8 +1,8 @@
 // Copyright (c) 2023, Venture Force Global Inc and contributors
 // For license information, please see license.txt
 
-frappe.ui.form.on("Coupon Issued", {
-	setup: function(frm) {
+frappe.ui.form.on('Collection Received', {
+setup: function(frm) {
 		/*frm.set_query("donation", function() {
 			return{
 				filters:[
@@ -22,15 +22,10 @@ frappe.ui.form.on("Coupon Issued", {
 
 
 	}
-
-
-
-
-
 });
 
 
-frappe.ui.form.on('Coupon Issued', {
+frappe.ui.form.on('Collection Received', {
     setup: function(frm) {
         var coupons_item_group = '';
         frappe.call({
@@ -55,11 +50,23 @@ frappe.ui.form.on('Coupon Issued', {
                 ]
             };
         });
+        frm.set_query('bank_cd', function() {
+            return {
+                filters: [
+                    ['account_type', '=', "Bank"]
+                ]
+            };
+        });
+        frm.set_query('credit_to', function() {
+            return {
+                filters: [
+                    ['account_type', '=', "Bank"]
+                ]
+            };
+        });
     }
 });
-
-
-frappe.ui.form.on('Coupon Issued Item', {
+frappe.ui.form.on('Collection Received Item', {
     item: function(frm, cdt, cdn) {
         var child = locals[cdt][cdn];
         frappe.call({
@@ -67,14 +74,15 @@ frappe.ui.form.on('Coupon Issued Item', {
             args: { item_code: child.item },
             callback: function(response) {
                 var balance_qty = response.message;
-                frappe.model.set_value(cdt, cdn, 'available_books', balance_qty);
-                frappe.model.set_value(cdt, cdn, 'balance_book_value', child.book_value*balance_qty);
+                frappe.model.set_value(cdt, cdn, 'balance_coupons', balance_qty);
+                frappe.model.set_value(cdt, cdn, 'balance_amount', child.book_value*balance_qty);
             }
         });
+    },
+    coupons: function(frm, cdt, cdn){
+        var child = locals[cdt][cdn];
+        frappe.model.set_value(cdt, cdn, 'amount', child.coupons*child.book_value);
+        frappe.model.set_value(cdt, cdn, 'balance_coupons_after_receipt', child.balance_coupons-child.coupons);
+        frappe.model.set_value(cdt, cdn, 'balance_amount_after_receipt', child.balance_coupons_after_receipt*child.book_value);
     }
 });
-
-
-
-
-

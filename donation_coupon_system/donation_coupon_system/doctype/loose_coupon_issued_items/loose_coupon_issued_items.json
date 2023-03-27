@@ -1,0 +1,92 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-27 11:46:13.269398",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "column_break_2",
+  "coupons_balance",
+  "column_break_4",
+  "value_balance",
+  "section_break_6",
+  "coupons_issue",
+  "column_break_8",
+  "value_issue",
+  "book_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item",
+   "reqd": 1
+  },
+  {
+   "fieldname": "coupons_balance",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Coupons Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "value_balance",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Value Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "coupons_issue",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Coupons Issue",
+   "reqd": 1
+  },
+  {
+   "fieldname": "value_issue",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Value Issue",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "item.book_value",
+   "fieldname": "book_value",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-27 12:38:10.016186",
+ "modified_by": "Administrator",
+ "module": "Donation Coupon System",
+ "name": "Loose Coupon Issued Items",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

@@ -1,0 +1,252 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-27 12:31:56.394850",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "date",
+  "cb_33",
+  "subscriber_code",
+  "address_and_contact_section",
+  "city",
+  "phone_no",
+  "no_of_coppies",
+  "column_break_2",
+  "postal_code",
+  "mobile_no",
+  "amount",
+  "column_break_4",
+  "subscriber_name",
+  "address",
+  "category",
+  "column_break_6",
+  "reference",
+  "reminder_address",
+  "mode_of_dispatch",
+  "transactiontype_section",
+  "mode_of_payment",
+  "column_break_20",
+  "cheque_date",
+  "column_break_22",
+  "cheque",
+  "column_break_24",
+  "bank",
+  "subscription_period_section",
+  "from",
+  "column_break_28",
+  "to",
+  "section_break_30",
+  "credit_to",
+  "column_break_32",
+  "bank_credit",
+  "section_break_34",
+  "remarks"
+ ],
+ "fields": [
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscriber_code",
+   "fieldtype": "Data",
+   "label": "Subscriber Code"
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "subscriber_name",
+   "fieldtype": "Data",
+   "label": "Subscriber Name"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "reference",
+   "fieldtype": "Data",
+   "label": "Reference"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "label": "City"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "address",
+   "fieldtype": "Data",
+   "label": "Address"
+  },
+  {
+   "fieldname": "reminder_address",
+   "fieldtype": "Data",
+   "label": "Reminder Address"
+  },
+  {
+   "fieldname": "phone_no",
+   "fieldtype": "Int",
+   "label": "Phone No"
+  },
+  {
+   "fieldname": "mobile_no",
+   "fieldtype": "Int",
+   "label": "Mobile No"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Data",
+   "label": "Category"
+  },
+  {
+   "fieldname": "mode_of_dispatch",
+   "fieldtype": "Data",
+   "label": "Mode of Dispatch"
+  },
+  {
+   "fieldname": "no_of_coppies",
+   "fieldtype": "Int",
+   "label": "No of Coppies"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "transactiontype_section",
+   "fieldtype": "Section Break",
+   "label": "TransactionType"
+  },
+  {
+   "fieldname": "mode_of_payment",
+   "fieldtype": "Select",
+   "label": "Mode Of Payment",
+   "options": "\nCash\nCheque\nOnline"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.mode_of_payment==\"Cheque\"|| doc.mode_of_payment==\"Online\"\n",
+   "fieldname": "cheque_date",
+   "fieldtype": "Date",
+   "label": "Cheque Date"
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.mode_of_payment==\"Cheque\" || doc.mode_of_payment==\"Online\"",
+   "fieldname": "cheque",
+   "fieldtype": "Data",
+   "label": "Cheque"
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "depends_on": "eval:doc.mode_of_payment==\"Cheque\"|| doc.mode_of_payment==\"Online\"\n",
+   "fieldname": "bank",
+   "fieldtype": "Data",
+   "label": "Bank"
+  },
+  {
+   "fieldname": "subscription_period_section",
+   "fieldtype": "Section Break",
+   "label": "Subscription Period"
+  },
+  {
+   "fieldname": "from",
+   "fieldtype": "Date",
+   "label": "From"
+  },
+  {
+   "fieldname": "column_break_28",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "to",
+   "fieldtype": "Date",
+   "label": "To"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "credit_to",
+   "fieldtype": "Link",
+   "label": "Credit To",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_32",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_credit",
+   "fieldtype": "Link",
+   "label": "Bank Credit",
+   "options": "Account"
+  },
+  {
+   "fieldname": "section_break_34",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text Editor",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "address_and_contact_section",
+   "fieldtype": "Section Break",
+   "label": "Address And Contact"
+  },
+  {
+   "fieldname": "cb_33",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-03-27 13:20:36.762251",
+ "modified_by": "Administrator",
+ "module": "Donation Coupon System",
+ "name": "Subscription Received",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

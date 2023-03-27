@@ -1,0 +1,132 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2023-03-24 11:25:58.764150",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item",
+  "column_break_2",
+  "balance_coupons",
+  "column_break_4",
+  "balance_amount",
+  "section_break_6",
+  "coupons",
+  "column_break_8",
+  "amount",
+  "section_break_10",
+  "balance_coupons_after_receipt",
+  "column_break_12",
+  "balance_amount_after_receipt",
+  "section_break_14",
+  "remarks",
+  "book_value"
+ ],
+ "fields": [
+  {
+   "fieldname": "item",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item",
+   "options": "Item"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_coupons",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Balance Coupons",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Balance Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "coupons",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Coupons"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_10",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_coupons_after_receipt",
+   "fieldtype": "Int",
+   "label": "Balance Coupons (After Receipt)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_12",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "balance_amount_after_receipt",
+   "fieldtype": "Currency",
+   "label": "Balance Amount (After Receipt)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_14",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Text",
+   "in_list_view": 1,
+   "label": "Remarks"
+  },
+  {
+   "fetch_from": "item.book_value",
+   "fieldname": "book_value",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Book Value"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-03-27 11:37:48.903956",
+ "modified_by": "Administrator",
+ "module": "Donation Coupon System",
+ "name": "Collection Received Item",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
