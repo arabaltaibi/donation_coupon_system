@@ -9,22 +9,28 @@
   "date",
   "cb_33",
   "subscriber_code",
+  "cb_22",
+  "subscriber_name",
+  "cb_21",
+  "reference",
   "address_and_contact_section",
   "city",
   "phone_no",
-  "no_of_coppies",
-  "column_break_2",
+  "cb_23",
   "postal_code",
   "mobile_no",
-  "amount",
-  "column_break_4",
-  "subscriber_name",
+  "cb_11",
   "address",
-  "category",
-  "column_break_6",
-  "reference",
+  "cb_01",
   "reminder_address",
+  "section_break_18",
+  "category",
+  "cb_14",
   "mode_of_dispatch",
+  "cb_2",
+  "no_of_coppies",
+  "cb_10",
+  "amount",
   "transactiontype_section",
   "mode_of_payment",
   "column_break_20",
@@ -51,26 +57,14 @@
    "label": "Date"
   },
   {
-   "fieldname": "column_break_2",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "subscriber_code",
    "fieldtype": "Data",
    "label": "Subscriber Code"
   },
   {
-   "fieldname": "column_break_4",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "subscriber_name",
    "fieldtype": "Data",
    "label": "Subscriber Name"
-  },
-  {
-   "fieldname": "column_break_6",
-   "fieldtype": "Column Break"
   },
   {
    "fieldname": "reference",
@@ -224,11 +218,47 @@
   {
    "fieldname": "cb_33",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_21",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_23",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_01",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "cb_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_18",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "cb_10",
+   "fieldtype": "Column Break"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2023-03-27 13:20:36.762251",
+ "modified": "2023-03-27 15:24:05.334368",
  "modified_by": "Administrator",
  "module": "Donation Coupon System",
  "name": "Subscription Received",

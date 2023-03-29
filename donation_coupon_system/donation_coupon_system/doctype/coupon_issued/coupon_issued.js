@@ -71,6 +71,20 @@ frappe.ui.form.on('Coupon Issued Item', {
                 frappe.model.set_value(cdt, cdn, 'balance_book_value', child.book_value*balance_qty);
             }
         });
+    },
+    books: function(frm, cdt, cdn) {
+        var child = locals[cdt][cdn];
+        frappe.call({
+            method: 'donation_coupon_system.donation_coupon_system.custom_events.get_serial_data',
+            args: { item_code: child.item, parent:child.parent },
+            callback: function(response) {
+                console.log(response.message)
+                var last_value = response.message;
+                frappe.model.set_value(cdt, cdn, 'from', last_value+1);
+                frappe.model.set_value(cdt, cdn, 'to', last_value+child.books);
+                frappe.model.set_value(cdt, cdn, 'coupons', `${last_value+1}-${child.book_size*(last_value+1)} to ${last_value+child.books}-${child.book_size*(last_value+child.books)}`);
+            }
+        });
     }
 });
 

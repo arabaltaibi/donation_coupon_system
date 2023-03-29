@@ -57,7 +57,7 @@ app_license = "MIT"
 # ------------
 
 # before_install = "donation_coupon_system.install.before_install"
-# after_install = "donation_coupon_system.install.after_install"
+after_install = "donation_coupon_system.custom_fields.after_install"
 
 # Uninstallation
 # ------------
@@ -95,13 +95,11 @@ app_license = "MIT"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-# 	"*": {
-# 		"on_update": "method",
-# 		"on_cancel": "method",
-# 		"on_trash": "method"
-#	}
-# }
+doc_events = {
+	"Purchase Receipt": {
+		"validate": "donation_coupon_system.donation_coupon_system.custom_events.update_serial_number",
+	}
+}
 
 # Scheduled Tasks
 # ---------------
